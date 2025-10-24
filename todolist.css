@@ -58,6 +58,8 @@ li {
     margin-bottom: 10px;
     flex-wrap: wrap;
     gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .task-text {
