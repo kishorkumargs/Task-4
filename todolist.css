@@ -1,0 +1,151 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+} 
+/* Styles the main container of the to-do list */
+.todo-container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+}
+.todo-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Removes default list styling for the to-do list */
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+input {
+    font-size: 1.6rem;
+	padding: 10px;
+	width: 300px;
+	border: 2px solid hsla(0, 0%, 80%, 0.5);
+	color: hsla(0, 0%, 0%, 0.5);
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+#task-input {
+    flex: 1;
+}
+
+/* Styles each list item in the to-do list */
+li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+}
+
+.task-text {
+    font-size: 1.6rem;
+    flex: 1;
+}
+/* Mark a task as completed */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+/* Adds spacing for buttons in list items */
+button {
+    margin-left: 10px;
+    font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+    height: 50px;
+    width: 90px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#add-btn {
+    background-color: hsl(125, 47%, 54%);
+}
+#add-btn:hover {
+    background-color: hsl(125, 47%, 62%);
+}
+.edit-btn, .rm-btn, .complete-btn {
+    font-size: 1.2rem;
+    height: 40px;
+}
+.edit-btn{
+    width: 80px;
+    background-color: hsl(39, 100%, 50%);
+}
+.edit-btn:hover {
+    background-color: hsl(45, 100%, 54%);
+}
+.rm-btn {
+    width: 95px;
+    background-color: hsl(0, 78%, 62%);
+}
+.rm-btn:hover {
+    background-color: hsl(0, 78%, 70%);
+}
+.complete-btn {
+    width: 125px;
+    background-color: hsl(204, 86%, 53%);
+}
+.complete-btn:hover {
+    background-color: hsl(204, 86%, 61%);
+}
+
+/* Responsive design for mobile-friendly website */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .todo-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    input {
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+    #add-btn {
+        width: 100%;
+        font-size: 1.2rem;
+        height: 45px;
+        margin-top: 10px;
+    }
+    li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .task-text {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        word-wrap: break-word;
+    }
+    button {
+        width: 100%;
+        margin: 5px 0;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .edit-btn, .rm-btn, .complete-btn {
+        width: 100%;
+    }
+    .todo-list {
+        overflow-x: hidden;
+    }
+}
